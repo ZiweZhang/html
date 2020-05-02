@@ -2,7 +2,7 @@ body {
     display: grid;
     margin: 0;
     padding: 0;
-    background-image: url("../Pictures/test.jpeg");
+    background-image: url("../Pictures/algemeen/test.jpeg");
     background-size: cover;
     background-attachment: fixed;
     color: #fff500;
@@ -22,11 +22,6 @@ body {
 
 h1 {
     font-size: 100px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 h3 {

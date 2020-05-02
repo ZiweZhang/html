@@ -2,7 +2,7 @@ body {
     display: grid;
     margin: 0;
     padding: 0;
-    background-image: url("../Pictures/test.jpeg");
+    background-image: url("../Pictures/algemeen/test.jpeg");
     background-size: cover;
     background-attachment: fixed;
     color: #fff500;
@@ -41,6 +41,14 @@ section {
     top: 10%;
     left: 50%;
     transform: translate(-50%);
+}
+
+.background {
+    background-color: black;
+    opacity: 50%;
+    height: 1000px;
+    width: 900px;
+    border-radius: 10%;
 }
 
 .home_button {

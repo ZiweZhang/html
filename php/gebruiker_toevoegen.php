@@ -10,13 +10,15 @@ $telefoonnummer = $landcode . " " . $nummer;
 $emailadres = $_POST["emailadres"];
 
 if (!empty($voornaam) || !empty($tussenvoegsel) || !empty($achternaam) || !empty($gebroorte_datum) || !empty($geslacht) || !empty($telefoonnummer) || !empty($emailadres)) {
-    $host = "localhost";
+    $host = "145.24.222.43/phpmyadmin/";
     $dbUsername = "root";
-    $dbPassword = "";
+    $dbPassword = "Bank@Y44n72";
     $dbName = "batbank";
 
-//create connection
+    //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
+
+    //check connection
     if (mysqli_connect_error()) {
         die('Connect Error(' . mysqli_connect_errno() . ')' . mysqli_connect_error());
     } else {
@@ -45,13 +47,13 @@ if (!empty($voornaam) || !empty($tussenvoegsel) || !empty($achternaam) || !empty
 
 header("location: ../index.html");
 
-
-/*$host = "localhost";
+/*
+$host = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
 $dbName = "batbank";
-// Create connection
 
+// Create connection
 $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
 
 // Check connection
@@ -59,5 +61,6 @@ if (mysqli_connect_error()) {
     die('Connect Error(' . mysqli_connect_errno() . ')' . mysqli_connect_error());
 } else {
     echo "Connected successfully";
-}*/
+}
+*/
 ?>
