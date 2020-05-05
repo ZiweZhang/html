@@ -3,12 +3,13 @@
 <head>
     <title>pin invoeren</title>
     <link href="../../CSS/pin_invoeren.css" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="refresh" content="10" >
 </head>
 <body>
 <div class="buttons">
     <button>
-        <a href="index.html"><img src="../../Pictures/algemeen/home_button.png"
-                                        class="home_button"></a>
+        <a href="../../index.php"><img src="../../Pictures/algemeen/home_button.png"
+                                       class="home_button"></a>
         <h3>D</h3>
     </button>
 </div>
@@ -17,9 +18,11 @@
     <section class="background"></section>
     <section>
         <h1>Batbank</h1>
-        <h2>Bitte geben Sie Ihren PIN-Code ein</h2>
+        <h2>Voer uw pincode in a.u.b.</h2>
         <br>
-        <form>
+        <form action="../../php/inloggen.php" method="post">
+            <input type="text" class="input_pin" name="pasnummer" placeholder="Passnummer" value="0987654"/>
+
             <input type="password" class="input_pin" name="pincode" placeholder="Pincode" pattern="[0-9]{4}"
                    maxlength="4" required/>
             <br>
@@ -27,9 +30,9 @@
             <input type="reset" class="input_corr" value="B   CORR">
         </form>
         <br>
-        <h2>Halten Sie Ihre PIN geheim. Lass niemanden zuschauen</h2>
+        <h2>Houd uw pincode geheim. Laat niemand meekijken</h2>
 
-        <a href="menu.html"><img src="../../Pictures/algemeen/passcode.png" style="width: 40%"></a>
+        <a href="menu.php"><img src="../../Pictures/algemeen/passcode.png" style="width: 40%"></a>
     </section>
 </div>
 </body>

@@ -7,13 +7,13 @@
 <body>
 <div class="buttons">
     <button class="home">
-        <a href="index.html"><img src="../../Pictures/algemeen/home_button.png"
-                                        class="home_button"></a>
+        <a href="../../index.php"><img src="../../Pictures/algemeen/home_button.png"
+                                       class="home_button"></a>
         <h3>D</h3>
     </button>
 
     <button class="home">
-        <a href="menu.html"><img src="../../Pictures/algemeen/left-teal-arrow.png"
+        <a href="menu.php"><img src="../../Pictures/algemeen/left-teal-arrow.png"
                                  class="home_button"></a>
         <h3>C</h3>
     </button>
@@ -24,7 +24,7 @@
     <section>
         <h1>Batbank</h1>
         <br>
-        <h2>Treffen Sie Ihre Wahl:</h2>
+        <h2>Maak uw keuze:</h2>
         <br><br><br>
 
         <button class="keuze">
@@ -51,8 +51,8 @@
         </button>
 
         <button class="keuze">
-            <a href="bedrag_invoeren.html"> <img src="../../Pictures/duits/sonst.png"
-                                                 class="keuze_button"> </a>
+            <a href="bedrag_invoeren.php"> <img src="../../Pictures/nederlands/anders.png"
+                                                class="keuze_button"> </a>
             <h3>D</h3>
         </button>
     </section>
