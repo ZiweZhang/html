@@ -1,6 +1,5 @@
 <?php
-session_id("batbank");
-session_start();
+include "../php/var.php";
 
 if (ctype_alnum($_SESSION["key"])) {
     switch ($_SESSION["key"]) {
@@ -36,7 +35,7 @@ if (ctype_alnum($_SESSION["key"])) {
     }
 }
 
-switch ($_SESSION["taal"]){
+switch ($_SESSION["taal"]) {
     case "Nederlands":
         $invoeren = "Voer het bedrag in.";
         $bedrag = "Bedrag";
@@ -63,13 +62,13 @@ switch ($_SESSION["taal"]){
     <button>
         <a href="../index.php"><img src="../Pictures/algemeen/home_button.png"
                                     class="home_button"></a>
-        <h3>D</h3>
+        <h3><?php echo $afbreken ?><br> D</h3>
     </button>
 
     <button>
         <a href="opnemen.php"><img src="../Pictures/algemeen/left-teal-arrow.png"
                                    class="home_button"></a>
-        <h3>C</h3>
+        <h3><?php echo $terug ?><br> C</h3>
     </button>
 </div>
 
@@ -77,17 +76,16 @@ switch ($_SESSION["taal"]){
     <section class="background"></section>
     <section>
         <h1>Batbank</h1>
-        <h2><?php echo $invoeren?></h2>
+        <h2><?php echo $invoeren ?></h2>
         <br>
         <form>
-            <input type="text" class="input_bedrag" name="Bedrag" placeholder="<?php echo $bedrag?>" maxlength="4"/>
+            <input type="text" class="input_bedrag" name="Bedrag" placeholder="<?php echo $bedrag ?>" maxlength="4"/>
             <br>
             <input type="submit" class="input_ok" value="*   OK">
             <input type="reset" class="input_corr" value="#   CORR">
         </form>
-
-        <br><br><br><br><br><br>
-        <a href="menu.php"><img src="../Pictures/algemeen/geld.png" style="width: 60%"></a>
+        <br><br><br><br><br><br><br><br>
+        <img src="../Pictures/algemeen/geld.png" style="width: 60%">
     </section>
 </div>
 </body>

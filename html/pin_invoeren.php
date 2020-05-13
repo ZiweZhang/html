@@ -1,11 +1,10 @@
 <?php
-session_id("batbank");
-session_start();
+include "../php/var.php";
 
-if (ctype_alnum($_SESSION["key"])) {
+if (ctype_alnum($_SESSION["key"]) || $_SESSION["key"] == '#' || $_SESSION["key"] == '*') {
     switch ($_SESSION["key"]) {
         case '*':
-            header("location: menu.php");
+            header("location: ../php/inloggen.php");
             break;
 
         case '#':
@@ -16,17 +15,16 @@ if (ctype_alnum($_SESSION["key"])) {
             header("location: ../../index.php");
             break;
 
-
-        case 0:
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-        case 6:
-        case 7:
-        case 8:
-        case 9:
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
             if (strlen($_SESSION["pin"]) < 4) {
                 $_SESSION["pin"] = $_SESSION["pin"] . $_SESSION["key"];
             }
@@ -64,7 +62,7 @@ switch ($_SESSION["taal"]) {
     <button>
         <a href="../index.php"><img src="../Pictures/algemeen/home_button.png"
                                     class="home_button"></a>
-        <h3>D</h3>
+        <h3><?php echo $afbreken ?><br> D</h3>
     </button>
 </div>
 
@@ -78,13 +76,13 @@ switch ($_SESSION["taal"]) {
         <h2 style="color: orangered"><?php echo $_SESSION["error"] ?></h2>
 
         <form action="../php/inloggen.php" method="post">
-            <input type="password" class="input_pin" name="pincode" placeholder="Pincode" pattern="[0-9]{4}"
+            <input type="text" class="input_pin" name="pincode" placeholder="Pincode" pattern="[0-9]{4}"
                    maxlength="4" value="<?php echo $_SESSION["pin"] ?>"/>
             <br>
             <input type="submit" class="input_ok" value="&#10033   OK">
             <input type="reset" class="input_corr" value="#   CORR">
         </form>
-        <br>
+        <br><br>
         <h2 style="color: orangered"><?php echo $geheim ?></h2>
 
         <a href="menu.php"><img src="../Pictures/algemeen/passcode.png" style="width: 40%"></a>

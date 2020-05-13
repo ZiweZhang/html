@@ -13,20 +13,22 @@ if (ctype_alnum($_SESSION["key"])) {
     }
 }
 
-$_SESSION["bedrag"] = NULL;
 
 switch ($_SESSION["taal"]){
     case "Nederlands":
-        $keuze = "Maak uw keuze:";
-        $anders = "../Pictures/nederlands/anders.png";
+        $keuze = "Weet u het zeker?";
+        $ja = "../Pictures/nederlands/ja.png";
+        $nee = "../Pictures/nederlands/nee.png";
         break;
     case "Engels":
-        $keuze = "Make your choice:";
-        $anders = "../Pictures/engels/otherwise.png";
+        $keuze = "Are you sure?";
+        $ja = "../Pictures/engels/yes.png";
+        $nee = "../Pictures/engels/no.png";
         break;
     case "Duits":
-        $keuze = "Treffen Sie Ihre Wahl:";
-        $anders = "../Pictures/duits/sonst.png";
+        $keuze = "Bist du sicher?";
+        $ja = "../Pictures/duits/ja.png";
+        $nee = "../Pictures/duits/nein.png";
         break;
 }
 
@@ -36,7 +38,7 @@ switch ($_SESSION["taal"]){
 <html>
 <head>
     <title>pin invoeren</title>
-    <link href="../CSS/opnemen.css" rel="stylesheet" type="text/css"/>
+    <link href="../CSS/bevestig.css" rel="stylesheet" type="text/css"/>
     <meta http-equiv="refresh" content="0.2">
 </head>
 <body>
@@ -48,7 +50,7 @@ switch ($_SESSION["taal"]){
     </button>
 
     <button class="home">
-        <a href="menu.php"><img src="../Pictures/algemeen/left-teal-arrow.png"
+        <a href="opnemen.php"><img src="../Pictures/algemeen/left-teal-arrow.png"
                                 class="home_button"></a>
         <h3><?php echo $terug ?><br> C</h3>
     </button>
@@ -60,35 +62,19 @@ switch ($_SESSION["taal"]){
         <h1>Batbank</h1>
         <br>
         <h2><?php echo $keuze?></h2>
-        <br><br><br>
+        <br><br><br><br><br>
 
         <button class="keuze">
-            <img src="../Pictures/algemeen/5_euro.png"
-                 class="keuze_button">
+            <a href="bonprinten.php"> <img src="<?php echo $ja?>"
+                                class="keuze_button"> </a>
             <h3>1</h3>
         </button>
 
         <button class="keuze">
-            <img src="../Pictures/algemeen/10_euro.png"
-                 class="keuze_button">
+           <a href="menu.php"> <img src="<?php echo $nee?>"
+                                class="keuze_button"> </a>
+
             <h3>2</h3>
-        </button>
-        <button class="keuze">
-            <img src="../Pictures/algemeen/20_euro.png"
-                 class="keuze_button">
-            <h3>3</h3>
-        </button>
-
-        <button class="keuze">
-            <img src="../Pictures/algemeen/50_euro.png"
-                 class="keuze_button">
-            <h3>4</h3>
-        </button>
-
-        <button class="keuze">
-            <a href="bedrag_invoeren.php"> <img src="<?php echo $anders?>"
-                                                class="keuze_button"> </a>
-            <h3>5</h3>
         </button>
     </section>
 </div>
