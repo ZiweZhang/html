@@ -1,20 +1,8 @@
 <?php
 include "../php/var.php";
 
-switch ($_SESSION["taal"]) {
-    case "Nederlands":
-        $tekst = "Bedankt voor het pinnen bij Batbank";
-        $tekst2 = "U kunt uw pas pakken";
-        break;
-    case "Engels":
-        $tekst = "Back:";
-        $tekst2 = "Abort:";
-        break;
-    case "Duits":
-        $tekst = "Zur&uuml;ck:";
-        $tekst2 = "Abbrechen:";
-        break;
-}
+
+$_SESSION["pasnummer"] = NULL;
 
 ?>
 
@@ -31,9 +19,9 @@ switch ($_SESSION["taal"]) {
     <section class="background"></section>
     <section>
         <h1>Batbank</h1>
-        <h2><?php echo $tekst ?></h2>
+        <h2><?php echo $bedankt ?></h2>
         <img src="../Pictures/algemeen/logo.png" style="width: 70%">
-        <h2 style="color: orangered"><?php echo $tekst2 ?></h2>
+        <h2 style="color: orangered"><?php echo $pas_pakken ?></h2>
     </section>
 </div>
 </body>
