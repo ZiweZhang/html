@@ -4,7 +4,7 @@ session_start();
 
 $host = "localhost";
 $dbUsername = "root";
-$dbPassword = "Bank@Y44n72";
+$dbPassword = "";
 $dbName = "batbank";
 
 // Create connection

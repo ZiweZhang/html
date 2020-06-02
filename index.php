@@ -1,7 +1,11 @@
 <?php
 include "php/var.php";
 
-if ($_SESSION['pasnummer'] != "..........." && $_SESSION['pasnummer'] != "") {
+if ($_SESSION["taal"] == null){
+    $_SESSION["taal"] = "Nederlands";
+}
+
+if ($_SESSION['pasnummer'] != "................" && $_SESSION['pasnummer'] != "") {
     header("location: html/pin_invoeren.php");
 }
 
@@ -32,7 +36,7 @@ if (ctype_alnum($_SESSION["key"])) {
 <head>
     <title>home</title>
     <link href="CSS/index.css" rel="stylesheet" type="text/css"/>
-    <meta http-equiv="refresh" content="2">
+    <meta http-equiv="refresh" content="0.2">
 </head>
 <body>
 <div class="buttons">
